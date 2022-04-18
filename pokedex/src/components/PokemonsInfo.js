@@ -25,10 +25,6 @@ const PokemonsInfo = () => {
                     <li cl><span className='lotation_list-subtitle'> </span><b><i className="fas fa-tachometer-alt"></i> velocidad:</b> {pokemons.stats?.[5].base_stat} KM</li>
                     <li cl><span className='lotation_list-subtitle'> </span><p><b><i className="fas fa-power-off"></i> Habilidad:</b> {pokemons.abilities?.[0].ability.name} </p></li>
                     <li cl><span className='lotation_list-subtitle'> </span><b><i className="fas fa-dumbbell"></i> Fuerza:</b> {pokemons.stats?.[0].base_stat} K</li>
-
-
-
-
                 </ul>
                 <Link to='/pokemons' className='botton1' ><i class="fas fa-external-link-alt"></i> regresar</Link>
             </div>

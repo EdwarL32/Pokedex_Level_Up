@@ -1,8 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-
-
-
 import PokemonsCards from './PokemonsCards';
 
 
@@ -10,10 +7,6 @@ const Pokemons = () => {
 
     const [types, setTypes] = useState([]);
     const [pokemons, setPokemons] = useState([]);
-   
-
-
-    //pagination
     const [page, setPage] = useState(1);
     const itemNumber = 6;
     const lastIndex = page * itemNumber;
@@ -25,7 +18,6 @@ const Pokemons = () => {
         pagesNumbers.push(i)
     }
 
-    //1. Consumir APi Pokemons. usar userselector
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1126')
             .then(res => setPokemons(res.data.results))
@@ -40,9 +32,7 @@ const Pokemons = () => {
         <div>
 
 <div className='container'>
-
-    
-               
+             
             </div>
 
             <button className='button_delete_circle' onClick={() => setPage(Math.random()*totalpages)}
@@ -62,9 +52,6 @@ const Pokemons = () => {
 
             </ul>
             
-            
-            
-
         </div>
 
     );

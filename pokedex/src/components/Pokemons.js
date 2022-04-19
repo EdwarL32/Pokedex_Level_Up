@@ -8,7 +8,7 @@ const Pokemons = () => {
     const [types, setTypes] = useState([]);
     const [pokemons, setPokemons] = useState([]);
     const [page, setPage] = useState(1);
-    const itemNumber = 6;
+    const itemNumber = 8;
     const lastIndex = page * itemNumber;
     const fistIndex = lastIndex - itemNumber;
     const totalpages = Math.ceil(pokemons?.length / itemNumber)
